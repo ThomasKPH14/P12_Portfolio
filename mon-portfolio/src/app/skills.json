@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "HTML",
+        "icon": "fab fa-html5"
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "icon": "fab fa-css3-alt"
+    },
+    {
+        "id": 3,
+        "name": "Javascript",
+        "icon": "fab fa-js"
+    },
+    {
+        "id": 4,
+        "name": "React",
+        "icon": "fab fa-react"
+    },
+    {
+        "id": 5,
+        "name": "Sass",
+        "icon": "fab fa-sass"
+    },
+    {
+        "id": 6,
+        "name": "SEO",
+        "icon": "fab fa-searchengin"
+    },
+    {
+        "id" : 7,
+        "name": "Debugging",
+        "icon": "fas fa-tools"
+    }
+]

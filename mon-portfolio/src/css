@@ -1,0 +1,591 @@
+@charset "UTF-8";
+/* Styles pour l'élément de navigation */
+nav {
+  /* Espacement autour du contenu */
+  padding: 1rem 2rem;
+  /* Définit la police d'écriture utilisée */
+  font-family: "Inter", sans-serif;
+  /* Utilise le modèle de boîte flex pour organiser le contenu */
+  display: flex;
+  /* Organise les éléments enfants en colonne */
+  flex-direction: column;
+  /* Centre les éléments enfants horizontalement */
+  align-items: center;
+  /* Couleur d'arrière-plan de l'élément de navigation */
+  background-color: #E9D5A1;
+}
+
+/* Styles pour la liste non ordonnée dans l'élément de navigation */
+nav ul {
+  /* Supprime les puces de la liste */
+  list-style-type: none;
+  /* Supprime le padding et la marge */
+  padding: 0;
+  margin: 0;
+  /* Utilise le modèle de boîte flex pour organiser les éléments de la liste */
+  display: flex;
+  /* Distribue les éléments de la liste uniformément sur l'axe horizontal */
+  justify-content: space-around;
+}
+
+/* Styles pour les éléments de la liste dans l'élément de navigation */
+nav ul li {
+  /* Affiche les éléments de la liste sur une ligne */
+  display: inline-block;
+}
+
+/* Styles pour les liens dans les éléments de la liste */
+nav ul li a {
+  /* Supprime le soulignement du lien */
+  text-decoration: none;
+  /* Couleur du texte du lien */
+  color: white;
+  /* Couleur d'arrière-plan du lien */
+  background-color: rgba(0, 0, 0, 0.5137254902);
+  /* Espacement autour du contenu du lien */
+  padding: 10px 20px;
+  /* Utilise le modèle de boîte flex pour centrer le contenu du lien */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Légère courbure des coins du lien */
+  border-radius: 1px;
+  /* Ombre portée sous le lien */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Effet de transition pour le changement de couleur d'arrière-plan et la transformation */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Styles pour les liens sur un écran de bureau */
+  /* Styles pour les liens sur une tablette */
+}
+@media screen and (min-width: 1025px) {
+  nav ul li a {
+    width: 200px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul li a {
+    width: 150px;
+  }
+}
+
+/* Styles pour le lien lorsqu'il est survolé, mis au point ou activé */
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  /* Changement de la couleur d'arrière-plan */
+  background-color: #000000;
+  /* Effet de déplacement vertical vers le haut */
+  transform: translateY(-3px);
+}
+
+/* Styles pour le logo */
+.logo {
+  /* Dimensions du logo */
+  width: 300px;
+  height: 300px;
+  /* Dimensions du logo sur un écran de bureau */
+  /* Dimensions du logo sur une tablette */
+}
+@media screen and (min-width: 1025px) {
+  .logo {
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Styles pour les icônes sociales */
+.social-icons {
+  /* Utilise le modèle de boîte flex pour centrer les icônes */
+  display: flex;
+  justify-content: center;
+  /* Espacement sous les icônes sociales */
+  margin-bottom: 15px;
+}
+
+/* Styles pour les liens des icônes sociales */
+.social-icons a {
+  /* Couleur des icônes sociales */
+  color: #545454;
+  /* Espacement autour de chaque icône sociale */
+  margin: 0 17px;
+  /* Taille de la police des icônes sociales */
+  font-size: 30px;
+  /* Effet de transition pour le changement de couleur */
+  transition: color 0.3s;
+  /* Taille de la police des icônes sociales sur un écran de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .social-icons a {
+    font-size: 40px;
+  }
+}
+
+/* Effet de survol pour les icônes sociales */
+.social-icons a:hover {
+  /* Changement de couleur des icônes sociales lors du survol */
+  color: #000000;
+}
+
+/* Animation de "flottaison" pour donner un effet de mouvement vertical au logo */
+@keyframes floating {
+  /* Au début de l'animation, le logo est à sa position initiale */
+  0% {
+    transform: translateY(0px);
+  }
+  /* Au milieu de l'animation, le logo se déplace légèrement vers le haut */
+  50% {
+    transform: translateY(-10px);
+  }
+  /* À la fin de l'animation, le logo revient à sa position initiale */
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Application de l'animation 'floating' au logo dans l'élément de navigation */
+nav .logo {
+  /* Définit l'animation à utiliser */
+  animation: floating 3s infinite;
+  /* Transition pour le mouvement du logo */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styles pour la section "À propos de moi" */
+.about-section {
+  /* Utilise le modèle de boîte flex pour organiser le contenu */
+  display: flex;
+  /* Organise les éléments enfants en colonne */
+  flex-direction: column;
+  /* Centre les éléments enfants horizontalement */
+  align-items: center;
+  /* Définit la police d'écriture de la section */
+  font-family: "Inter", sans-serif;
+  /* Couleur de fond transparente (pas vraiment nécessaire avec cette valeur) */
+  background-color: rgba(255, 255, 255, 0);
+  /* Ajoute une marge en bas pour séparer cette section de la suivante */
+  margin-bottom: 40px;
+}
+
+/* Styles pour le titre h2 de la section "À propos de moi" */
+.about-section h2 {
+  /* Utilise le modèle de boîte flex pour organiser le contenu */
+  display: flex;
+  /* Centre le texte horizontalement */
+  justify-content: center;
+  /* Définit la police d'écriture pour le titre */
+  font-family: "Parisienne", cursive;
+  /* Taille du texte pour le titre */
+  font-size: 32px;
+  /* Ajoute un espace en haut du titre */
+  padding-top: 30px;
+  /* Styles spécifiques pour les écrans de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .about-section h2 {
+    /* Augmente la taille du texte sur les écrans de bureau */
+    font-size: 50px;
+  }
+}
+
+/* Styles pour le portrait ou l'image de la section */
+.portrait {
+  /* Définit la largeur et la hauteur de l'image */
+  width: 360px;
+  height: 360px;
+  /* Assure que l'image est positionnée relativement à son conteneur */
+  position: relative;
+  /* Centre l'image horizontalement */
+  margin-left: auto;
+  margin-right: auto;
+  /* Styles spécifiques pour les écrans de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .portrait {
+    /* Augmente la taille de l'image sur les écrans de bureau */
+    width: 460px;
+    height: 460px;
+  }
+}
+
+/* Styles pour la description ou le texte de la section */
+.description {
+  /* Remonte le texte pour chevaucher l'image (négatif) */
+  margin-top: -68px;
+  /* Centre le texte */
+  text-align: center;
+  /* Limite la largeur maximale du texte */
+  max-width: 600px;
+  /* Taille du texte de la description */
+  font-size: 18px;
+  /* Espacement autour du texte */
+  padding: 20px 40px;
+  /* Ajoute une bordure autour du texte */
+  border: 3px solid #000000;
+  /* Arrondit les coins de la bordure */
+  border-radius: 14px;
+  /* Ajoute une ombre sous le texte pour le faire ressortir */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  /* Centre le bloc de texte horizontalement */
+  margin-left: auto;
+  margin-right: auto;
+  /* Styles spécifiques pour les écrans de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .description {
+    /* Remonte encore plus le texte pour chevaucher l'image sur les écrans de bureau */
+    margin-top: -84px;
+  }
+}
+
+/* Styles pour le titre h2 du conteneur de projets */
+.projects-container h2 {
+  /* Utilise flexbox pour centrer le texte */
+  display: flex;
+  justify-content: center;
+  /* Applique une marge en haut */
+  margin-top: 40px;
+  /* Définit la famille de polices pour le titre */
+  font-family: "Parisienne", cursive;
+  /* Définit la taille de la police */
+  font-size: 32px;
+  /* Change la taille de la police pour les appareils de type bureau */
+  /* Change la taille de la police pour les appareils de type tablette */
+}
+@media screen and (min-width: 1025px) {
+  .projects-container h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .projects-container h2 {
+    font-size: 40px;
+  }
+}
+
+/* Styles pour le titre h3 du conteneur de projets */
+.projects-container h3 {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 20px 0;
+  font-family: "Inter", sans-serif;
+  /* Note : il y a deux propriétés 'color'. La deuxième (white) écrasera la première (#000000) */
+  color: #000000;
+  color: white;
+  /* Ajoute une ombre portée au texte */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour le paragraphe p du conteneur de projets */
+.projects-container p {
+  font-family: "Inter", sans-serif;
+  /* Justifie le texte */
+  text-align: justify;
+  color: rgb(212, 192, 192);
+  font-size: 14px;
+}
+
+/* Styles généraux pour le conteneur de projets */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E9D5A1;
+  padding-bottom: 55px;
+}
+
+/* Styles pour chaque bloc de projet */
+.project-block {
+  width: 300px;
+  border: 3px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  border-radius: 14px;
+  margin: 20px;
+  padding: 15px;
+  text-decoration: none;
+  color: inherit;
+  /* Ajoute une transition pour le transform et le box-shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: black;
+}
+
+/* Styles pour le conteneur enveloppant tous les blocs de projet */
+.project-blocks-wrapper {
+  display: flex;
+  justify-content: space-around;
+  /* Autorise les éléments à se mettre à la ligne si nécessaire */
+  flex-wrap: wrap;
+  width: 100%;
+  /* Modifie la largeur pour les appareils de type bureau */
+}
+@media screen and (min-width: 1025px) {
+  .project-blocks-wrapper {
+    width: 69%;
+  }
+}
+
+/* Styles pour le bloc de projet lors du survol */
+.project-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgb(0, 0, 0);
+}
+
+/* Styles pour l'image dans le bloc de projet */
+.project-block img {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+/* Styles pour le titre h3 dans le bloc de projet */
+.project-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 19px;
+}
+
+/* Styles pour la liste dans le bloc de projet */
+.project-block ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #E9D5A1;
+  font-family: "Inter", sans-serif;
+}
+
+/* Styles pour les éléments de liste dans le bloc de projet */
+.project-block li {
+  margin-bottom: 5px;
+}
+
+/* Conteneur principal pour les compétences */
+.skills-container {
+  /* Utilisation de flex pour aligner les éléments horizontalement */
+  display: flex;
+  /* Définition de la famille de polices pour le conteneur */
+  font-family: "Inter", sans-serif;
+  /* Si les éléments dépassent la largeur, ils passent à la ligne suivante */
+  flex-wrap: wrap;
+  /* Espacement équilibré entre les éléments */
+  justify-content: space-around;
+  /* Couleur d'arrière-plan du conteneur */
+  background-color: #000000;
+  /* Marge intérieure autour des bords du conteneur */
+  padding: 20px;
+  /* Espacement entre les éléments enfants */
+  gap: 20px;
+  /* Marge intérieure supplémentaire en bas pour l'espacement */
+  padding-bottom: 60px;
+  /* Styles pour les titres (h2) à l'intérieur du conteneur de compétences */
+}
+.skills-container h2 {
+  /* Force le titre à prendre toute la largeur du conteneur */
+  width: 100%;
+  /* Centre le texte horizontalement */
+  text-align: center;
+  /* Couleur du texte du titre */
+  color: white;
+  /* Espacement en dessous du titre */
+  margin-bottom: 20px;
+  /* Taille de la police pour le titre */
+  font-size: 30px;
+  /* Ligne sous le titre pour le séparer visuellement du contenu ci-dessous */
+  border-bottom: 2px solid white;
+  /* Espacement entre le titre et sa bordure inférieure */
+  padding-bottom: 10px;
+  /* Famille de polices spécifique pour le titre */
+  font-family: "Parisienne", cursive;
+  /* Styles spécifiques pour les appareils de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .skills-container h2 {
+    font-size: 50px;
+  }
+}
+
+/* Bloc représentant une compétence individuelle */
+.skill-block {
+  /* Alignement vertical des éléments à l'intérieur du bloc */
+  display: flex;
+  flex-direction: column;
+  /* Centre les éléments horizontalement */
+  align-items: center;
+  /* Centre les éléments verticalement */
+  justify-content: center;
+  /* Marge intérieure autour des bords du bloc */
+  padding: 20px;
+  /* Couleur d'arrière-plan semi-transparente */
+  background-color: rgba(255, 255, 255, 0.24);
+  /* Bords arrondis pour le bloc */
+  border-radius: 10px;
+  /* Transition douce pour les transformations et les ombres */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Largeur par défaut du bloc */
+  width: 20%;
+  /* Effet de survol pour le bloc de compétence */
+  /* Styles pour une icône à l'intérieur du bloc */
+  /* Styles pour un texte/span à l'intérieur du bloc */
+  /* Styles spécifiques pour les appareils de bureau pour le bloc de compétence */
+  /* Styles spécifiques pour les tablettes pour le bloc de compétence */
+}
+.skill-block:hover {
+  /* Augmente légèrement la taille du bloc */
+  transform: scale(1.05);
+  /* Ajoute une ombre subtile sous le bloc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.skill-block i {
+  /* Taille de l'icône */
+  font-size: 20px;
+  /* Couleur de l'icône */
+  color: white;
+  /* Styles spécifiques pour les appareils de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .skill-block i {
+    font-size: 40px;
+  }
+}
+.skill-block span {
+  /* Couleur du texte */
+  color: white;
+  /* Espacement au-dessus du texte */
+  margin-top: 10px;
+  /* Taille de la police du texte */
+  font-size: 12px;
+  /* Épaisseur de la police */
+  font-weight: 600;
+  /* Styles spécifiques pour les appareils de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .skill-block span {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .skill-block {
+    width: 8%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .skill-block {
+    width: 8%;
+  }
+}
+
+/* Styles pour le conteneur de contact */
+.contact-container {
+  /* Utilise le modèle de boîte flex pour organiser le contenu */
+  display: flex;
+  /* Organise les éléments enfants en colonne */
+  flex-direction: column;
+  /* Centre les éléments enfants horizontalement */
+  align-items: center;
+  /* Ajoute un espace autour du conteneur */
+  padding: 20px;
+  /* Couleur de fond pour le conteneur */
+  background-color: #f7f7f7;
+  /* Arrondit les coins du conteneur */
+  border-radius: 10px;
+}
+
+/* Styles pour le titre h2 à l'intérieur du conteneur de contact */
+.contact-container h2 {
+  /* Taille du texte pour le titre */
+  font-size: 32px;
+  /* Espacement sous le titre */
+  margin-bottom: 1px;
+  /* Couleur du texte pour le titre */
+  color: #333;
+  /* Définit la police d'écriture pour le titre */
+  font-family: "Parisienne", cursive;
+  /* Styles spécifiques pour les écrans de bureau */
+}
+@media screen and (min-width: 1025px) {
+  .contact-container h2 {
+    /* Augmente la taille du texte sur les écrans de bureau */
+    font-size: 50px;
+  }
+}
+
+/* Styles pour le paragraphe à l'intérieur du conteneur de contact */
+.contact-container p {
+  /* Taille du texte pour le paragraphe */
+  font-size: 18px;
+  /* Centre le texte du paragraphe */
+  text-align: center;
+  /* Limite la largeur maximale du paragraphe */
+  max-width: 500px;
+  /* Couleur du texte pour le paragraphe */
+  color: #555;
+  /* Définit la police d'écriture pour le paragraphe */
+  font-family: "Inter", sans-serif;
+}
+
+/* Styles pour l'icône email à l'intérieur du conteneur de contact */
+.email-icon {
+  /* Définit la largeur de l'icône email */
+  width: 350px;
+  /* Change le curseur en main lors du survol pour indiquer la cliquabilité */
+  cursor: pointer;
+  /* Effet de transition pour les transformations */
+  transition: transform 0.3s;
+  /* Effet de survol de l'icône email */
+}
+.email-icon:hover {
+  /* Augmente légèrement la taille de l'icône lors du survol */
+  transform: scale(1.1);
+}
+
+/* Styles pour le conteneur du pied de page */
+.footer-container {
+  /* Couleur de fond du pied de page */
+  background-color: #000000;
+  /* Espace autour du contenu du pied de page */
+  padding: 20px 0;
+  /* Utilise le modèle de boîte flex pour organiser le contenu */
+  display: flex;
+  /* Organise les éléments enfants en colonne */
+  flex-direction: column;
+  /* Centre les éléments enfants horizontalement */
+  align-items: center;
+  /* Couleur du texte pour le conteneur */
+  color: white;
+  /* Taille de la police pour le conteneur */
+  font-size: 14px;
+  /* Police d'écriture pour le conteneur */
+  font-family: "Inter", sans-serif;
+  /* Styles pour les icônes sociales à l'intérieur du pied de page */
+  /* Styles pour les liens des icônes sociales */
+}
+.footer-container-social-icons {
+  /* Utilise le modèle de boîte flex pour organiser les icônes */
+  display: flex;
+  /* Espacement sous les icônes sociales */
+  margin-bottom: 15px;
+}
+.footer-container .social-icons a {
+  /* Couleur du texte pour les icônes */
+  color: white;
+  /* Taille de la police pour les icônes */
+  font-size: 24px;
+  /* Effet de transition pour la couleur */
+  transition: color 0.3s;
+  /* Effet de survol pour les icônes sociales */
+}
+.footer-container .social-icons a:hover {
+  /* Change la couleur des icônes au survol */
+  color: #777;
+}
+
+/* Styles pour le paragraphe à l'intérieur du conteneur du pied de page */
+.footer-container p {
+  /* Supprime la marge autour du paragraphe */
+  margin: 0;
+}
+
+/*# sourceMappingURL=css.map */

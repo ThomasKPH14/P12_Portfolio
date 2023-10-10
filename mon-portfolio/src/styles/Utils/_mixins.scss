@@ -1,0 +1,17 @@
+// Définition des styles responsifs
+
+// Mixin pour les appareils de bureau
+@mixin desktop {
+  // Applique les styles contenus dans ce mixin uniquement pour les écrans dont la largeur est supérieure ou égale à la valeur définie pour 'desktop' dans la variable $breakpoints
+  @media screen and (min-width: map-get($map: $breakpoints, $key: desktop)) {
+    @content;
+  }
+}
+
+// Mixin pour les tablettes
+@mixin tablet {
+  // Applique les styles contenus dans ce mixin pour les écrans dont la largeur est comprise entre 768px et 1024px inclusivement
+  @media (min-width:768px) and (max-width:1024px) {
+    @content;
+  }
+}
