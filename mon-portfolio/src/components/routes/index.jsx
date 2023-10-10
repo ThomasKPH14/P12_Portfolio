@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from '../Navbar';
 import Footer from '../Footer';
@@ -8,7 +7,6 @@ import About from '../About';
 import Contact from '../Contact';
 import Project from '../Project';
 import Skill from '../Skill';
-
 
 const Home = () => {
   return (
@@ -21,10 +19,9 @@ const Home = () => {
   );
 };
 
-
 const AppRouter = () => {
   return (
-    <Router>                   
+    <Router>            
       <Navbar />               
       <Routes>                 
         <Route path="/" element={<Home />} />  
